@@ -1,15 +1,8 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/assets/:path*",
-      "destination": "/assets/:path*"
-    },
-    {
-      "source": "/((?!assets/).*\\.(?:js|css|png|jpg|jpeg|gif|ico|svg|webp))",
-      "destination": "/$1"
-    },
-    {
-      "source": "/((?!api|static).*|[^.]*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
@@ -24,7 +17,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|ico|svg|webp))",
+      "source": "/(.*).(js|css|png|jpg|jpeg|gif|ico|svg|webp)",
       "headers": [
         {
           "key": "Cache-Control",
