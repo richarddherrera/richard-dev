@@ -175,7 +175,7 @@ Editar `index.html`:
 
 ## 📞 Contato
 
-- **Email**: richard.gomes@alest.com.br
+- **Email**: yrichardz3003@gmail.com
 - **LinkedIn**: [richardherrerag](https://www.linkedin.com/in/richardherrerag/)
 - **GitHub**: [richarddherrera](https://github.com/richarddherrera)
 - **Telefone**: (11) 99349-3421
