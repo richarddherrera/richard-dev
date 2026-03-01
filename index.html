@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Herrera Gomes - Desenvolvedor de Software Back-End</title>
+    <meta name="description" content="Desenvolvedor Back-End especializado em Java, Python e IA. Transformando problemas complexos em soluções robustas e escaláveis.">
+    <meta name="keywords" content="Desenvolvedor Back-End, Java, Python, IA, APIs, Spring Boot, MySQL, Software Engineering">
+    <meta name="author" content="Richard Herrera Gomes">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://herrera.dev">
+    <meta property="og:title" content="Richard Herrera Gomes - Desenvolvedor de Software Back-End">
+    <meta property="og:description" content="Especializado em Java, Python e IA. Construindo APIs escaláveis e sistemas robustos.">
+    <meta property="og:image" content="https://herrera.dev/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://herrera.dev">
+    <meta property="twitter:title" content="Richard Herrera Gomes - Desenvolvedor de Software Back-End">
+    <meta property="twitter:description" content="Especializado em Java, Python e IA. Construindo APIs escaláveis e sistemas robustos.">
+    <meta property="twitter:image" content="https://herrera.dev/assets/images/og-image.jpg">
+    
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Fontes Geist + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Geist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- AOS Library - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="bg-root text-prime">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-surface-prime/80 backdrop-blur-md border-b border-custom z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <i data-lucide="code" class="w-5 h-5 text-primary-fg"></i>
+                    </div>
+                    <span class="font-mono font-bold text-xl dev-energy ml-6">herrera.dev</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#sobre" class="text-sec hover:text-prime transition-colors">Sobre</a>
+                    <a href="#projetos" class="text-sec hover:text-prime transition-colors">Projetos</a>
+                    <a href="#stack" class="text-sec hover:text-prime transition-colors">Stack</a>
+                    <a href="#contato" class="text-sec hover:text-prime transition-colors">Contato</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-surface-sec hover:bg-surface-prime transition-colors">
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                    </button>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-lg bg-surface-sec hover:bg-surface-prime transition-colors">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface-prime border-t border-custom">
+            <div class="px-4 py-2 space-y-1">
+                <a href="#sobre" class="block px-3 py-2 rounded-lg text-sec hover:text-prime hover:bg-surface-sec transition-colors">Sobre</a>
+                <a href="#projetos" class="block px-3 py-2 rounded-lg text-sec hover:text-prime hover:bg-surface-sec transition-colors">Projetos</a>
+                <a href="#stack" class="block px-3 py-2 rounded-lg text-sec hover:text-prime hover:bg-surface-sec transition-colors">Stack</a>
+                <a href="#contato" class="block px-3 py-2 rounded-lg text-sec hover:text-prime hover:bg-surface-sec transition-colors">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden hero-parallax" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Background Effects Premium -->
+        <div class="aurora-bg"></div>
+        <div class="background-beams">
+            <div class="beam"></div>
+            <div class="beam"></div>
+            <div class="beam"></div>
+            <div class="beam"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                            <span>Disponível para oportunidades</span>
+                        </div>
+                        
+                        <h1 class="font-geist font-bold text-5xl lg:text-7xl leading-tight">
+                            <span class="block text-reveal text-reveal-delay-1">Richard Herrera</span>
+                            <span class="block text-primary text-reveal text-reveal-delay-2">Gomes</span>
+                        </h1>
+                        
+                        <p class="text-xl lg:text-2xl text-sec font-medium text-reveal text-reveal-delay-3">
+                            Desenvolvedor de Software <span id="typing-text" class="text-primary"></span>
+                        </p>
+                        
+                        <p class="text-lg text-sec leading-relaxed">
+                            Transformando problemas complexos em soluções robustas com <strong>Java</strong>, <strong>Python</strong> e <strong>Inteligência Artificial</strong>. 
+                            Especializado em construir APIs escaláveis e sistemas que fazem a diferença.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projetos" class="inline-flex items-center space-x-2 bg-primary text-primary-fg px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity glow sparkles relative">
+                            <span>Ver Projetos</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                            <div class="sparkle"></div>
+                        </a>
+                        
+                        <a href="#contato" class="inline-flex items-center space-x-2 border border-custom px-6 py-3 rounded-lg font-semibold hover:bg-surface-sec transition-colors">
+                            <span>Entrar em Contato</span>
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8">
+                        <div class="text-center">
+                            <div class="font-geist font-bold text-2xl text-primary">1</div>
+                            <div class="text-sm text-sec">Ano de Experiência</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-geist font-bold text-2xl text-primary">10+</div>
+                            <div class="text-sm text-sec">Projetos Concluídos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-geist font-bold text-2xl text-primary">100%</div>
+                            <div class="text-sm text-sec">Comprometimento</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative lamp-effect">
+                        <div class="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl transform rotate-6"></div>
+                        <img src="assets/images/eu.jpg" alt="Richard Herrera Gomes" loading="lazy" class="relative w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl float-animation gpu-accelerated">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-20 bg-surface-prime" data-aos="fade-up" data-aos-duration="1000">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="800">
+                <h1 class="font-geist font-bold text-5xl lg:text-6xl mb-4">
+                            Richard Herrera Gomes
+                        </h1>
+                        <p class="text-xl lg:text-2xl text-sec mb-6">
+                            Desenvolvedor de Software <span id="typing-text" class="text-primary"></span>
+                        </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="bg-surface-sec rounded-xl p-6 border border-custom" data-aos="flip-left" data-aos-duration="800" data-aos-delay="400">
+                        <h3 class="font-geist font-semibold text-xl mb-3 text-primary">Formação Acadêmica</h3>
+                        <div class="space-y-2">
+                            <p class="font-medium">Análise e Desenvolvimento de Sistemas</p>
+                            <p class="text-sec">Universidade Cruzeiro do Sul (UNICSUL)</p>
+                            <p class="text-sm text-sec">4º semestre • Conclusão: Junho/2026</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-surface-sec rounded-xl p-6 border border-custom" data-aos="flip-left" data-aos-duration="800" data-aos-delay="600">
+                        <h3 class="font-geist font-semibold text-xl mb-3 text-primary">Experiência Profissional</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <p class="font-medium">Desenvolvedor Front-End</p>
+                                <p class="text-sec">Alucon Artigos de Serralheria • Set/2025 (Freelancer)</p>
+                                <p class="text-sm text-sec">Landing page moderna e responsiva para empresa de artigos de serralheria</p>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="font-medium">Estagiário Desenvolvedor Back-End</p>
+                                <p class="text-sec">Alest Consultoria • Fev/2026 – Até o momento</p>
+                                <p class="text-sm text-sec">Desenvolvimento back-end, otimização de fluxos e engenharia de prompt com IA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-surface-sec rounded-xl p-6 border border-custom">
+                        <h3 class="font-geist font-semibold text-xl mb-3 text-primary">Minha Missão</h3>
+                        <p class="text-sec leading-relaxed">
+                            "Tenho o sonho de ser reconhecido como Engenheiro de Software. Acredito que a tecnologia tem o poder de transformar realidades e quero fazer parte dessa transformação."
+                        </p>
+                    </div>
+                    
+                    <div class="bg-surface-sec rounded-xl p-6 border border-custom">
+                        <h3 class="font-geist font-semibold text-xl mb-6 text-primary">Valores Profissionais</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-3 p-3 bg-surface-prime rounded-lg hover:bg-primary/5 transition-all cursor-pointer">
+                                <div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="target" class="w-5 h-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-sm">Foco em Resultados</div>
+                                    <div class="text-xs text-sec">Impacto mensurável</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-surface-prime rounded-lg hover:bg-primary/5 transition-all cursor-pointer">
+                                <div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="zap" class="w-5 h-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-sm">Inovação Constante</div>
+                                    <div class="text-xs text-sec">Tecnologia de ponta</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-surface-prime rounded-lg hover:bg-primary/5 transition-all cursor-pointer">
+                                <div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="book-open" class="w-5 h-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-sm">Aprendizado Contínuo</div>
+                                    <div class="text-xs text-sec">Crescimento constante</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-surface-prime rounded-lg hover:bg-primary/5 transition-all cursor-pointer">
+                                <div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="shield" class="w-5 h-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-sm">Qualidade e Robustez</div>
+                                    <div class="text-xs text-sec">Código limpo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section id="projetos" class="py-20 bg-root" data-aos="fade-up" data-aos-duration="1000">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="800">
+                <h2 class="font-geist font-bold text-4xl lg:text-5xl mb-4">
+                    Projetos <span class="text-primary">Destaque</span>
+                </h2>
+                <p class="text-xl text-sec max-w-2xl mx-auto">
+                    Soluções reais que demonstram habilidades técnicas e capacidade de resolver problemas complexos.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- CriAI Bot Discord -->
+                <div class="bg-surface-prime rounded-xl border border-custom overflow-hidden hover:shadow-xl transition-shadow group aspect-square flex flex-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <!-- Métrica de Impacto -->
+                        <div class="mb-4">
+                            <div class="text-3xl font-bold text-primary">85%</div>
+                            <div class="text-sm text-sec">Aumento no engajamento</div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="bot" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="font-geist font-semibold text-lg">Bot Discord IA</h3>
+                        </div>
+                        
+                        <p class="text-sec mb-4 text-sm flex-grow">Bot inteligente com IA generativa para criação de imagens e interações.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">Python</span>
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">Discord API</span>
+                        </div>
+                        
+                        <div class="mt-auto">
+                            <a href="https://github.com/richarddherrera/criAI-bot-discord" target="_blank" class="text-primary hover:underline text-sm">Ver projeto →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Currency Converter -->
+                <div class="bg-surface-prime rounded-xl border border-custom overflow-hidden hover:shadow-xl transition-shadow group aspect-square flex flex-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <!-- Métrica de Impacto -->
+                        <div class="mb-4">
+                            <div class="text-3xl font-bold text-primary">60%</div>
+                            <div class="text-sm text-sec">Redução no tempo</div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="dollar-sign" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="font-geist font-semibold text-lg">Conversor Moedas</h3>
+                        </div>
+                        
+                        <p class="text-sec mb-4 text-sm flex-grow">Conversor em tempo real com taxas atualizadas e interface intuitiva.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">JavaScript</span>
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">API REST</span>
+                        </div>
+                        
+                        <div class="mt-auto">
+                            <a href="https://github.com/richarddherrera/currency-converter" target="_blank" class="text-primary hover:underline text-sm">Ver projeto →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FIPE Table Search -->
+                <div class="bg-surface-prime rounded-xl border border-custom overflow-hidden hover:shadow-xl transition-shadow group aspect-square flex flex-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <!-- Métrica de Impacto -->
+                        <div class="mb-4">
+                            <div class="text-3xl font-bold text-primary">75%</div>
+                            <div class="text-sm text-sec">Melhoria na busca</div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="search" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="font-geist font-semibold text-lg">Busca FIPE</h3>
+                        </div>
+                        
+                        <p class="text-sec mb-4 text-sm flex-grow">Sistema de consulta de preços de veículos com busca otimizada.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">Python</span>
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">API FIPE</span>
+                        </div>
+                        
+                        <div class="mt-auto">
+                            <a href="https://github.com/richarddherrera/fipe-table-search" target="_blank" class="text-primary hover:underline text-sm">Ver projeto →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Banking System -->
+                <div class="bg-surface-prime rounded-xl border border-custom overflow-hidden hover:shadow-xl transition-shadow group aspect-square flex flex-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <!-- Métrica de Impacto -->
+                        <div class="mb-4">
+                            <div class="text-3xl font-bold text-primary">90%</div>
+                            <div class="text-sm text-sec">Automação de processos</div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="credit-card" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="font-geist font-semibold text-lg">Sistema Bancário</h3>
+                        </div>
+                        
+                        <p class="text-sec mb-4 text-sm flex-grow">Sistema completo com gestão de contas e validações de segurança.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">Java</span>
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">Spring Boot</span>
+                        </div>
+                        
+                        <div class="mt-auto">
+                            <a href="https://github.com/richarddherrera/banking-system" target="_blank" class="text-primary hover:underline text-sm">Ver projeto →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Personal Library -->
+                <div class="bg-surface-prime rounded-xl border border-custom overflow-hidden hover:shadow-xl transition-shadow group aspect-square flex flex-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <!-- Métrica de Impacto -->
+                        <div class="mb-4">
+                            <div class="text-3xl font-bold text-primary">40%</div>
+                            <div class="text-sm text-sec">Redução no tempo</div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="book" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="font-geist font-semibold text-lg">API Biblioteca</h3>
+                        </div>
+                        
+                        <p class="text-sec mb-4 text-sm flex-grow">API RESTful para gerenciamento de livros com validação automatizada.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">Spring Boot</span>
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">MySQL</span>
+                        </div>
+                        
+                        <div class="mt-auto">
+                            <a href="https://github.com/richarddherrera/personal-library" target="_blank" class="text-primary hover:underline text-sm">Ver projeto →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Arena Nexus -->
+                <div class="bg-surface-prime rounded-xl border border-custom overflow-hidden hover:shadow-xl transition-shadow group aspect-square flex flex-col" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <!-- Métrica de Impacto -->
+                        <div class="mb-4">
+                            <div class="text-3xl font-bold text-primary">70%</div>
+                            <div class="text-sm text-sec">Melhoria na performance</div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <i data-lucide="gamepad-2" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <h3 class="font-geist font-semibold text-lg">Arena Nexus</h3>
+                        </div>
+                        
+                        <p class="text-sec mb-4 text-sm flex-grow">Sistema de batalhas multiplayer com matchmaking inteligente.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">Java</span>
+                            <span class="px-2 py-1 bg-surface-sec rounded text-xs font-medium">Socket.io</span>
+                        </div>
+                        
+                        <div class="mt-auto">
+                            <a href="https://github.com/richarddherrera/arena-nexus" target="_blank" class="text-primary hover:underline text-sm">Ver projeto →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack Section -->
+    <section id="stack" class="py-20 bg-surface-prime" data-aos="fade-up" data-aos-duration="600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="500">
+                <h2 class="font-geist font-bold text-4xl lg:text-5xl mb-4">
+                    Stack <span class="text-primary">Tecnológica</span>
+                </h2>
+                <p class="text-xl text-sec max-w-2xl mx-auto">
+                    As tecnologias que domino para construir soluções robustas e escaláveis
+                </p>
+            </div>
+            
+            <!-- Marquee de Tecnologias -->
+            <div class="mb-16" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                <div class="marquee bg-surface-sec rounded-xl p-4 border border-custom">
+                    <div class="marquee-content">
+                        <!-- Primeira remessa completa -->
+                        <div class="flex items-center space-x-4 px-2">
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="coffee" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">Java</span>
+                            </div>
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="terminal" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">Python</span>
+                            </div>
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="layers" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">Spring Boot</span>
+                            </div>
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="database" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">MySQL</span>
+                            </div>
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="brain" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">IA & ML</span>
+                            </div>
+                        </div>
+                        <!-- Segunda remessa duplicada exatamente igual -->
+                        <div class="flex items-center space-x-4 px-2">
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="coffee" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">Java</span>
+                            </div>
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="terminal" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">Python</span>
+                            </div>
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="layers" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">Spring Boot</span>
+                            </div>
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="database" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">MySQL</span>
+                            </div>
+                            <div class="flex items-center space-x-2 whitespace-nowrap">
+                                <i data-lucide="brain" class="w-5 h-5 text-primary"></i>
+                                <span class="font-semibold text-sm">IA & ML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bento-grid" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                <!-- Stack Completo - Item Large Único -->
+                <div class="bento-item bento-item-large blur-fade blur-fade-delay-1">
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <!-- Coluna Esquerda -->
+                        <div>
+                            <!-- Linguagens -->
+                            <div class="mb-8">
+                                <h4 class="font-semibold text-xl mb-4 text-primary flex items-center space-x-3" data-aos="fade-right" data-aos-duration="500" data-aos-delay="300">
+                                    <i data-lucide="code" class="w-5 h-5"></i>
+                                    Linguagens
+                                </h4>
+                                <div class="flex flex-wrap gap-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="coffee" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">Java</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="terminal" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">Python</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="globe" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Frameworks -->
+                            <div class="mb-8">
+                                <h4 class="font-semibold text-xl mb-4 text-primary flex items-center space-x-3" data-aos="fade-right" data-aos-duration="500" data-aos-delay="500">
+                                    <i data-lucide="cloud" class="w-5 h-5"></i>
+                                    Frameworks
+                                </h4>
+                                <div class="flex flex-wrap gap-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="zap" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">Spring Boot</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Database -->
+                            <div>
+                                <h4 class="font-semibold text-xl mb-4 text-primary flex items-center space-x-3" data-aos="fade-right" data-aos-duration="500" data-aos-delay="700">
+                                    <i data-lucide="database" class="w-5 h-5"></i>
+                                    Database
+                                </h4>
+                                <div class="flex flex-wrap gap-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="table" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Coluna Direita -->
+                        <div>
+                            <!-- IA -->
+                            <div class="mb-8">
+                                <h4 class="font-semibold text-xl mb-4 text-primary flex items-center space-x-3" data-aos="fade-right" data-aos-duration="500" data-aos-delay="900">
+                                    <i data-lucide="brain" class="w-5 h-5"></i>
+                                    IA
+                                </h4>
+                                <div class="flex flex-wrap gap-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1000">
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="sparkles" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">Prompt Engineering</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="workflow" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">Make</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Ferramentas -->
+                            <div>
+                                <h4 class="font-semibold text-xl mb-4 text-primary flex items-center space-x-3" data-aos="fade-right" data-aos-duration="500" data-aos-delay="1100">
+                                    <i data-lucide="wrench" class="w-5 h-5"></i>
+                                    Ferramentas
+                                </h4>
+                                <div class="flex flex-wrap gap-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="git-branch" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">Git/GitHub</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="calendar" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">Monday.com</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">Notion</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 px-4 py-3 bg-surface-sec rounded-lg hover:bg-primary/5 transition-colors">
+                                        <i data-lucide="terminal" class="w-5 h-5 text-primary"></i>
+                                        <span class="font-medium">Linux</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-20 bg-surface-prime" data-aos="fade-up" data-aos-duration="1000">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="800">
+                <h2 class="font-geist font-bold text-4xl lg:text-5xl mb-4">
+                    Vamos <span class="text-primary">Conversar</span>
+                </h2>
+                <p class="text-xl text-sec max-w-2xl mx-auto">
+                    Estou sempre aberto a novas oportunidades e desafios. Vamos construir algo incrível juntos!
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Contact Info -->
+                <div class="space-y-6" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="bg-surface-sec rounded-xl p-6 border border-custom" data-aos="flip-left" data-aos-duration="800" data-aos-delay="400">
+                        <h3 class="font-geist font-semibold text-xl mb-4">Informações de Contato</h3>
+                        <div class="space-y-4">
+                            <a href="mailto:yrichardz3003@gmail.com" class="flex items-center space-x-3 text-sec hover:text-primary transition-colors">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                                <span>yrichardz3003@gmail.com</span>
+                            </a>
+                            <a href="tel:+5511993493421" class="flex items-center space-x-3 text-sec hover:text-primary transition-colors">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                <span>(11) 99349-3421</span>
+                            </a>
+                            <div class="flex items-center space-x-3 text-sec">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                <span>Itaquera, São Paulo/SP</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-surface-prime rounded-xl p-6 border border-custom">
+                        <h3 class="font-geist font-semibold text-xl mb-4">Redes Sociais</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/richardherrerag/" target="_blank" class="w-10 h-10 bg-surface-sec rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-fg transition-colors">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://github.com/richarddherrera" target="_blank" class="w-10 h-10 bg-surface-sec rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-fg transition-colors">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Message -->
+                <div class="bg-surface-prime rounded-xl p-6 border border-custom">
+                    <h3 class="font-geist font-semibold text-xl mb-4">Mensagem Rápida</h3>
+                    <p class="text-sec mb-6">
+                        Você pode me contatar diretamente pelo e-mail ou telefone. Tempo de resposta aproximado: 10 minutos.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-surface-sec rounded-lg p-4">
+                            <p class="text-sm text-sec">
+                                <strong>Disponibilidade:</strong> Aberto a oportunidades de desenvolvimento back-end e projetos desafiadores.
+                            </p>
+                        </div>
+                        <div class="bg-surface-sec rounded-lg p-4">
+                            <p class="text-sm text-sec">
+                                <strong>Objetivo:</strong> Evoluir para Engenheiro de Software e participar de decisões arquiteturais em projetos impactantes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface-prime border-t border-custom py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-2">
+                    <div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
+                        <i data-lucide="code" class="w-4 h-4 text-primary-fg"></i>
+                    </div>
+                    <span class="font-geist font-semibold">Richard Herrera Gomes</span>
+                </div>
+                <p class="text-sm text-sec">
+                    © <span id="current-year"></span> Richard Herrera Gomes. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
