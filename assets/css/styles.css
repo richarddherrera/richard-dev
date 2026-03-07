@@ -81,6 +81,13 @@ body {
 .text-primary-fg { color: var(--c-primary-fg); }
 .border-custom { border-color: var(--b-border); }
 
+/* Prevenir quebra de linha na animação Back-End - Global */
+#typing-text {
+    white-space: nowrap;
+    display: inline-block;
+    min-width: 0; /* Permite ajuste automático */
+}
+
 /* Animações sutis */
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
@@ -127,6 +134,18 @@ body {
     
     .hero-subtitle {
         font-size: 1.25rem;
+    }
+    
+    /* Prevenir quebra de linha na animação Back-End */
+    #typing-text {
+        white-space: nowrap;
+        display: inline-block;
+        min-width: 0; /* Permite ajuste automático */
+    }
+    
+    /* Ajuste responsivo para o container do texto */
+    .text-xl span#typing-text {
+        font-size: 0.9em; /* Reduz ligeiramente em mobile */
     }
 }
 
